@@ -92,6 +92,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
+    color: #f00;
   }
   .topnav.responsive a {
     float: none;
@@ -127,6 +128,43 @@ main {
     margin: 2% 5%;
   }
 } 
+
+/* Add error with javascript*/
+
+.error-message{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fe142f;
+  font-size: 14px;
+}
+
+.error-class{
+  border : solid #fe142f 2px;
+  background-color: #fe142f;
+}
+
+/* Validation message */
+
+#validation {
+  width: 486px;
+  margin: auto;
+  padding: 50px 10px;
+  position: absolute;
+  left: 33%;
+  top:80%;
+  z-index: 2;
+  border: #279e7a solid 2px;
+  color: #279e7a;
+  font-weight: bold;
+  background-color: white;
+  justify-content: center;
+  display: none;
+}
+
+#validation h3 {
+  margin-left: 67px;
+}
 
 .modal-btn {
   font-size: 145%;
@@ -584,3 +622,34 @@ footer {
   }
 }
 
+/* Confirmation message */
+
+#confirmation {
+  height: 700px;
+  width: 75%;
+  margin: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#confirmation h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#confirmation .btn-close {
+  position: absolute;
+  bottom: 210px;
+  left : 210px;
+  background: #fe142f;
+  padding: 1em;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#confirmation .btn-close:hover {
+  background: #3876ac;
+}

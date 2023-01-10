@@ -58,7 +58,15 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
+            <!--Ajout du message de confirmation à l'inscription-->
+            <div id="confirmation">
+              <h1>Votre inscription a bien été enregistrée.<br>
+                Merci pour votre participation!</h1>
+              <button class="btn-close">Close</button>
+            </div>
+            <!--Ajout de l'id "form" pour sélection dans le js-->
             <form
+              id="form"
               name="reserve"
               action="index.html"
               method="get"
@@ -75,6 +83,8 @@
                   minlength="2"
                 /><br>
               </div>
+              <!--Ajout des id d'erreur pour le js-->
+              <div id="first-error"></div>
               <div
                 class="formData">
                 <label>Nom</label><br>
@@ -85,6 +95,8 @@
                   name="last"
                 /><br>
               </div>
+              <!--Ajout des id d'erreur pour le js-->
+              <div id="last-error"></div>
               <div
                 class="formData">
                 <label>E-mail</label><br>
@@ -95,6 +107,8 @@
                   name="email"
                 /><br>
               </div>
+              <!--Ajout des id d'erreur pour le js-->
+              <div id="email-error"></div>
               <div
                 class="formData">
                 <label>Date de naissance</label><br>
@@ -105,11 +119,14 @@
                   name="birthdate"
                 /><br>
               </div>
+              <!--Ajout des id d'erreur pour le js-->
+              <div id="birthdate-error"></div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
+              <div id="quantity-error" class="error"></div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
                 class="formData">
@@ -180,7 +197,8 @@
                   Portland</label
                 >
               </div>
-
+              <!--Ajout des id d'erreur pour le js-->
+              <div id="location-error"></div>
               <div
                 class="formData">
                 <input
@@ -197,10 +215,12 @@
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
+              <!--Ajout des id d'erreur pour le js-->
+              <div id="validation-error"></div>
               <input
                 class="btn-submit"
                 type="submit"
