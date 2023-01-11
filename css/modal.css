@@ -48,6 +48,7 @@ img {
 }
 .main-navbar {
     float: right;
+    margin-right: 50px;
 }
 .topnav a {
   float: left;
@@ -68,7 +69,7 @@ img {
   text-underline-offset: 8px;
 }
 
-.topnav a.active {
+.topnav a.active i.active{
   background-color: #ff0000;
   color: #ffffff;
   text-decoration:underline;
@@ -77,15 +78,17 @@ img {
   text-decoration:underline;
 }
 
-.topnav .icon {
-  display: none;
-}
-
 @media screen and (max-width: 1074px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    color: #f00;
+  }
+  .topnav a.icon.active {
+    float: right;
+    display: block;
+    color: white;
   }
 }
 
@@ -97,7 +100,6 @@ img {
     position: absolute;
     right: 0;
     top: 0;
-    color: #f00;
   }
   .topnav.responsive a {
     float: none;
@@ -220,10 +222,12 @@ main {
   z-index: 1;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(26, 39, 156, 0.4);
+  background-color: white;
 }
 
 .content {
@@ -237,7 +241,8 @@ main {
   overflow: hidden;
   position: relative;
   color: #fff;
-  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-body {

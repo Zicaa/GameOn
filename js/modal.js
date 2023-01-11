@@ -12,7 +12,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // Fonction qui lance la modale
 // Je sélectionne le background de ma modale et lui applique un display block pour l'afficher
 function launchModal() {
-  modalbg.style.display = "block";
+  modalbg.style.display = "flex";
 }
 
 // Je récupère mon élément et je déclenche la fonction closeModal au click
