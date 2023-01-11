@@ -48,8 +48,13 @@ img {
 }
 .main-navbar {
     float: right;
-    margin-right: 50px;
 }
+@media screen and (max-width: 1074px) {
+  .main-navbar {
+    margin-top: 50px;
+}
+}
+
 .topnav a {
   float: left;
   display: block;
@@ -76,6 +81,10 @@ img {
   text-underline-offset: 8px;
   border-radius: 15px;
   text-decoration:underline;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 @media screen and (max-width: 1074px) {
