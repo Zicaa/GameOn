@@ -64,12 +64,17 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration:underline;
+  text-underline-offset: 8px;
 }
 
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
+  text-decoration:underline;
+  text-underline-offset: 8px;
   border-radius: 15px;
+  text-decoration:underline;
 }
 
 .topnav .icon {
@@ -132,16 +137,17 @@ main {
 /* Add error with javascript*/
 
 .error-message{
+  font-family: 'Roboto';
+  font-style: normal;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-weight: bold;
-  color: #fe142f;
-  font-size: 14px;
+  font-weight: 400;
+  color: #FF4E60;
+  font-size: 10px;
 }
 
 .error-class{
-  border : solid #fe142f 2px;
-  background-color: #fe142f;
+  border : solid #FF4E60 2px;
 }
 
 /* Validation message */
@@ -507,7 +513,8 @@ h1.hero-headline{
 }
 @media screen and (max-width: 800px) {
   h1.hero-headline{
-    font-size: 3rem;
+    font-weight: 500;
+    font-size: 40px;
     position: relative;
   }
 }
@@ -595,7 +602,7 @@ footer {
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 13px;
   }
   .hero-img img {
     border-radius: 10px;

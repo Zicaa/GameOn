@@ -7,10 +7,10 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans"rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <!--J'ajoute la classe responsive en js grâce à la fonction editNav-->
@@ -20,7 +20,6 @@
     </div>
     <!--Je supprime la classe active en JS pour la déclencher au click-->
     <div class="main-navbar">
-      <a href="#"><span>Accueil</span></a>
       <a href="#"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
@@ -60,9 +59,8 @@
           <div class="modal-body">
             <!--Ajout du message de confirmation à l'inscription-->
             <div id="confirmation">
-              <h1>Votre inscription a bien été enregistrée.<br>
-                Merci pour votre participation!</h1>
-              <button class="btn-close">Close</button>
+              <h1>Merci pour votre inscription</h1>
+              <button class="btn-close">Fermer</button>
             </div>
             <!--Ajout de l'id "form" pour sélection dans le js-->
             <form
