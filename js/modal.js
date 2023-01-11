@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 })
 
-// 3# Gestion des erreurs du formulaire
+// 3/ Gestion des erreurs du formulaire
 
 const validation = document.getElementById ('checkbox1')
 const firstnameError = document.getElementById ('first-error');

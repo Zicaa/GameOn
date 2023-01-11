@@ -69,7 +69,7 @@ img {
   text-underline-offset: 8px;
 }
 
-.topnav a.active i.active{
+.topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   text-decoration:underline;
