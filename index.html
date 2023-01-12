@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Reservation</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -16,20 +16,19 @@
     <!--J'ajoute la classe responsive en js grâce à la fonction editNav-->
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="img/Logo.png" width="auto" height="auto" />
+        <img alt="logo" src="img/Logo.png">
+      </div>
+      <!--Je supprime la classe active en JS pour la déclencher au click-->
+      <div class="main-navbar">
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+      </div>
+        <a href="javascript:void(0);" class="icon" onclick="editNav()">
+          <i class="fa fa-bars"></i>
+        </a>
     </div>
-    <!--Je supprime la classe active en JS pour la déclencher au click-->
-    <div class="main-navbar">
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="editNav()">
-      <i class="fa fa-bars"></i>
-    </a>
-    </div>
-  </div>
     <main>
       <div class="hero-section responsive">
         <div class="hero-content">
@@ -46,7 +45,7 @@
           </button>
         </div>
         <div class="hero-img">
-          <img src="img/bg_img.jpg" alt="img" />
+          <img src="img/bg_img.jpg" alt="img">
         </div>
         <button class="btn-signup modal-btn">
           je m'inscris
@@ -70,6 +69,7 @@
               method="get"
               onsubmit="return validate();"
             >
+            <!--Input à traiter dans le js-->
               <div
                 class="formData">
                 <label>Prénom</label><br>
@@ -79,7 +79,7 @@
                   id="first"
                   name="first"
                   minlength="2"
-                /><br>
+                ><br>
               </div>
               <!--Ajout des id d'erreur pour le js-->
               <div id="first-error"></div>
@@ -91,7 +91,7 @@
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                ><br>
               </div>
               <!--Ajout des id d'erreur pour le js-->
               <div id="last-error"></div>
@@ -103,7 +103,7 @@
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                ><br>
               </div>
               <!--Ajout des id d'erreur pour le js-->
               <div id="email-error"></div>
@@ -115,7 +115,7 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                ><br>
               </div>
               <!--Ajout des id d'erreur pour le js-->
               <div id="birthdate-error"></div>
@@ -134,7 +134,7 @@
                   id="location1"
                   name="location"
                   value="New York"
-                />
+                >
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
                   New York</label
@@ -145,7 +145,7 @@
                   id="location2"
                   name="location"
                   value="San Francisco"
-                />
+                >
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
                   San Francisco</label
@@ -156,7 +156,7 @@
                   id="location3"
                   name="location"
                   value="Seattle"
-                />
+                >
                 <label class="checkbox-label" for="location3">
                   <span class="checkbox-icon"></span>
                   Seattle</label
@@ -167,7 +167,7 @@
                   id="location4"
                   name="location"
                   value="Chicago"
-                />
+                >
                 <label class="checkbox-label" for="location4">
                   <span class="checkbox-icon"></span>
                   Chicago</label
@@ -178,7 +178,7 @@
                   id="location5"
                   name="location"
                   value="Boston"
-                />
+                >
                 <label class="checkbox-label" for="location5">
                   <span class="checkbox-icon"></span>
                   Boston</label
@@ -189,7 +189,7 @@
                   id="location6"
                   name="location"
                   value="Portland"
-                />
+                >
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
@@ -204,13 +204,13 @@
                   type="checkbox"
                   id="checkbox1"
                   checked
-                />
-                <label class="checkbox2-label" for="checkbox1" required>
+                >
+                <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <input class="checkbox-input" type="checkbox" id="checkbox2">
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Je souhaite être prévenu des prochains évènements.
@@ -222,9 +222,8 @@
               <input
                 class="btn-submit"
                 type="submit"
-                class="button"
                 value="C'est parti"
-              />
+              >
             </form>
           </div>
         </div>
