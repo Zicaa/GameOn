@@ -77,7 +77,7 @@ let firstValidate=false;
 
 // Si le prénom ne correspond pas aux caractères autorisés par ma regex, si il y'a - de 2 caractères, si le champ est vide
 if (!firstname.value.match(regexNames) || firstname.value.length < 2 || firstname.value == null) {
-    firstnameError.innerHTML = 'Veuillez entrer 2 caractères minimum pour le champ du prénom.';
+    firstnameError.innerHTML = 'Votre prénom est incomplet ou mal orthographié, veuillez le ressaisir.';
     firstnameError.classList.add("error-message");
     firstname.classList.add("error-class");
   } else {
@@ -93,7 +93,7 @@ let lastValidate=false;
 
 // Si le nom ne correspond pas aux caractères autorisés par ma regex, si il y'a - de 2 caractères, si le champ est vide
 if (!lastname.value.match(regexNames) || lastname.value.length < 2 || lastname.value == null) {
-    lastnameError.innerHTML = 'Veuillez entrer 2 caractères minimum pour le champ du nom.';
+    lastnameError.innerHTML = 'Votre nom est incomplet ou mal orthographié, veuillez le ressaisir.';
     lastnameError.classList.add("error-message");
     lastname.classList.add("error-class");
   } else {
@@ -109,7 +109,7 @@ let emailValidate=false;
 
 // Si le mail ne correspond pas aux caractères autorisés par ma regex, si le champ est vide
 if (!email.value.match(regexEmail) || email.value == null) {
-    emailError.innerHTML = 'Veuillez entrer une adresse mail valide.';
+    emailError.innerHTML = 'Veuillez entrer une adresse email valide.';
     emailError.classList.add("error-message");
     email.classList.add("error-class");
 } else {
