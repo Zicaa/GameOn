@@ -74,8 +74,8 @@ function validate () {
 
 let firstValidate=false;
 
-if (!firstname.value.match(regexNames) || firstname.value.length < 1 || firstname.value == null) {
-    firstnameError.innerHTML = 'Prénom incomplet ou mal orthographié';
+if (!firstname.value.match(regexNames) || firstname.value.length < 2 || firstname.value == null) {
+    firstnameError.innerHTML = 'Veuillez entrer 2 caractères minimum pour le champ du prénom.';
     firstnameError.classList.add("error-message");
     firstname.classList.add("error-class");
   } else {
@@ -89,8 +89,8 @@ if (!firstname.value.match(regexNames) || firstname.value.length < 1 || firstnam
 
 let lastValidate=false;
 
-if (!lastname.value.match(regexNames) || lastname.value.length < 1 || lastname.value == null) {
-    lastnameError.innerHTML = 'Nom incomplet ou mal orthographié';
+if (!lastname.value.match(regexNames) || lastname.value.length < 2 || lastname.value == null) {
+    lastnameError.innerHTML = 'Veuillez entrer 2 caractères minimum pour le champ du nom.';
     lastnameError.classList.add("error-message");
     lastname.classList.add("error-class");
   } else {
@@ -105,7 +105,7 @@ if (!lastname.value.match(regexNames) || lastname.value.length < 1 || lastname.v
 let emailValidate=false;
 
 if (!email.value.match(regexEmail) || email.value.length < 1 || email.value == null) {
-    emailError.innerHTML = 'Adresse mail invalide';
+    emailError.innerHTML = 'Veuillez entrer une adresse mail valide.';
     emailError.classList.add("error-message");
     email.classList.add("error-class");
 } else {
@@ -120,7 +120,7 @@ if (!email.value.match(regexEmail) || email.value.length < 1 || email.value == n
 let birthValidate=false;
 
 if (!birthdate.value.match(regexBirthdate)) { 
-  birthdateError.innerHTML = 'Date de naissance incorrecte';
+  birthdateError.innerHTML = 'Veuillez entrer votre date de naissance.';
   birthdateError.classList.add("error-message");
   birthdate.classList.add("error-class");
 } else {
@@ -135,7 +135,7 @@ if (!birthdate.value.match(regexBirthdate)) {
 let quantityValidate=false;
 
 if (!quantity.value.match(regexQuantityTounament)) { 
-  quantityError.innerHTML = 'Indiquer un nombre de tournois';
+  quantityError.innerHTML = 'Veuillez indiquer un nombre de tournois';
   quantityError.classList.add("error-message");
   quantity.classList.add("error-class");
 } else {
@@ -150,7 +150,7 @@ if (!quantity.value.match(regexQuantityTounament)) {
 let radioChecked = false;
 
 if (!location1.checked && !location2.checked && !location3.checked && !location4.checked && !location5.checked && !location6.checked) { 
-  locationError.innerHTML = 'Choisir au une ville';
+  locationError.innerHTML = 'Veuillez choisir au une ville';
   locationError.classList.add("error-message");       
 } else {
   locationError.style.display = 'none';
@@ -163,7 +163,7 @@ if (!location1.checked && !location2.checked && !location3.checked && !location4
 let conditionsChecked = false;
 
   if (!validation.checked) {
-    validationError.innerHTML = 'Accepter les termes et conditions générales';
+    validationError.innerHTML = 'Veuillez accepter les termes et conditions générales';
     validationError.classList.add("error-message");
   } else {
     validationError.style.display = 'none';
