@@ -48,6 +48,7 @@ form.addEventListener('submit', (e) => {
 
 // 3/ Gestion des erreurs du formulaire
 
+// Je récupère les éléments du formulaire dans le DOM
 const validation = document.getElementById ('checkbox1')
 const firstnameError = document.getElementById ('first-error');
 const lastnameError = document.getElementById ('last-error');
@@ -59,13 +60,14 @@ const validationError = document.getElementById ('validation-error');
 const confirmation = document.getElementById ('confirmation');
 const confirmationCloseBtn = document.getElementsByClassName('btn-close');
 
-//  Traitement du formulaire
+//  Traitement du formulaire : initialisation des expressions régulières
 
 let regexNames= /^[A-ZÇÉÈÊËÀÂÎÏÔÙÛ]{1}[a-zçéèêëàâîïôùû]+[-]?[a-zçéèêëàâîïôùû]+$/i;
 let regexEmail = /^([a-z0-9]+(?:\.[a-z0-9]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])?$/;
 let regexBirthdate = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
 let regexQuantityTounament = /^[0-9]+$/;
 
+//  Traitement du formulaire : fonction validate qui vérifie les données une par une avec une condition
 
 function validate () {
 
@@ -73,6 +75,7 @@ function validate () {
 
 let firstValidate=false;
 
+// Si le prénom ne correspond pas aux caractères autorisés par ma regex, si il y'a - de 2 caractères, si le champ est vide
 if (!firstname.value.match(regexNames) || firstname.value.length < 2 || firstname.value == null) {
     firstnameError.innerHTML = 'Veuillez entrer 2 caractères minimum pour le champ du prénom.';
     firstnameError.classList.add("error-message");
@@ -88,6 +91,7 @@ if (!firstname.value.match(regexNames) || firstname.value.length < 2 || firstnam
 
 let lastValidate=false;
 
+// Si le nom ne correspond pas aux caractères autorisés par ma regex, si il y'a - de 2 caractères, si le champ est vide
 if (!lastname.value.match(regexNames) || lastname.value.length < 2 || lastname.value == null) {
     lastnameError.innerHTML = 'Veuillez entrer 2 caractères minimum pour le champ du nom.';
     lastnameError.classList.add("error-message");
@@ -103,7 +107,8 @@ if (!lastname.value.match(regexNames) || lastname.value.length < 2 || lastname.v
 
 let emailValidate=false;
 
-if (!email.value.match(regexEmail) || email.value.length < 1 || email.value == null) {
+// Si le mail ne correspond pas aux caractères autorisés par ma regex, si le champ est vide
+if (!email.value.match(regexEmail) || email.value == null) {
     emailError.innerHTML = 'Veuillez entrer une adresse mail valide.';
     emailError.classList.add("error-message");
     email.classList.add("error-class");
@@ -118,7 +123,8 @@ if (!email.value.match(regexEmail) || email.value.length < 1 || email.value == n
 
 let birthValidate=false;
 
-if (!birthdate.value.match(regexBirthdate)) { 
+// Si le format de date ne correspond pas aux caractères autorisés par ma regex, si le champ est vide
+if (!birthdate.value.match(regexBirthdate) || birthdate.value == null) { 
   birthdateError.innerHTML = 'Veuillez entrer votre date de naissance.';
   birthdateError.classList.add("error-message");
   birthdate.classList.add("error-class");
@@ -133,7 +139,8 @@ if (!birthdate.value.match(regexBirthdate)) {
 
 let quantityValidate=false;
 
-if (!quantity.value.match(regexQuantityTounament)) { 
+// Si le champ ne correspond pas aux caractères autorisés par ma regex, si le champ est vide
+if (!quantity.value.match(regexQuantityTounament) || quantity.value == null) { 
   quantityError.innerHTML = 'Veuillez indiquer un nombre de tournois';
   quantityError.classList.add("error-message");
   quantity.classList.add("error-class");
@@ -148,6 +155,7 @@ if (!quantity.value.match(regexQuantityTounament)) {
 
 let radioChecked = false;
 
+// Si aucune des checkbox n'est cochée
 if (!location1.checked && !location2.checked && !location3.checked && !location4.checked && !location5.checked && !location6.checked) { 
   locationError.innerHTML = 'Veuillez choisir au une ville';
   locationError.classList.add("error-message");       
@@ -161,6 +169,7 @@ if (!location1.checked && !location2.checked && !location3.checked && !location4
 
 let conditionsChecked = false;
 
+// Si validation n'est pas cochée
   if (!validation.checked) {
     validationError.innerHTML = 'Veuillez accepter les termes et conditions générales';
     validationError.classList.add("error-message");
@@ -172,6 +181,7 @@ let conditionsChecked = false;
 
   // Confirmation inscription réussie
 
+  // Si toutes mes variables conditionnelles sont à true, alors le formulaire disparaît et le message de confirmation est affiché
   if (firstValidate == true && lastValidate == true && emailValidate == true && birthValidate == true && quantityValidate == true && radioChecked == true && conditionsChecked == true) {
     form.style.display = "none";
     confirmation.style.display = "flex";
