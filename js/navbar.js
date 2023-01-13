@@ -1,4 +1,4 @@
-// Nabar qui se déploie/replie
+// Nabar qui se déploie/replie en cliquant sur l'icône menu burger
 function editNav() {
   let navbar = document.getElementById("myTopnav");
 
