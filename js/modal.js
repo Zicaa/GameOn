@@ -157,7 +157,7 @@ let radioChecked = false;
 
 // Si aucune des checkbox n'est cochée
 if (!location1.checked && !location2.checked && !location3.checked && !location4.checked && !location5.checked && !location6.checked) { 
-  locationError.innerHTML = 'Veuillez choisir au une ville';
+  locationError.innerHTML = 'Veuillez choisir une ville';
   locationError.classList.add("error-message");       
 } else {
   locationError.style.display = 'none';
