@@ -40,12 +40,6 @@ const location4 = document.getElementById ('location4');
 const location5 = document.getElementById ('location5');
 const location6 = document.getElementById ('location6');
 
-// Désactivation du traitement par défaut du button submit
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-})
-
 // 3/ Gestion des erreurs du formulaire
 
 // Je récupère les éléments du formulaire dans le DOM
@@ -87,6 +81,8 @@ if (!firstname.value.match(regexNames) || firstname.value.length < 2 || firstnam
     firstValidate = true;
 };
 
+console.log(firstname);
+
 // Vérification du nom
 
 let lastValidate=false;
@@ -102,6 +98,8 @@ if (!lastname.value.match(regexNames) || lastname.value.length < 2 || lastname.v
     lastname.classList.remove("error-class");
     lastValidate = true;
 };
+
+console.log(lastname);
 
 // Vérification de l'e-mail
 
@@ -119,6 +117,8 @@ if (!email.value.match(regexEmail) || email.value == null) {
     emailValidate = true;
 };
 
+console.log(email);
+
  // Vérification de la date de naissance
 
 let birthValidate=false;
@@ -134,6 +134,9 @@ if (!birthdate.value.match(regexBirthdate) || birthdate.value == null) {
   birthdate.classList.remove("error-class");
   birthValidate = true;   
 };
+
+console.log(birthdate);
+console.log(birthdateError);
 
 // Vérification du nombre de tournois
 
