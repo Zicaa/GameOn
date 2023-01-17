@@ -192,5 +192,7 @@ let conditionsChecked = false;
 
 };
 
+form.addEventListener('submit', validate);
+
   // Fermeture de la modale de confirmation
 confirmationCloseBtn[0].addEventListener("click", closeModal);
